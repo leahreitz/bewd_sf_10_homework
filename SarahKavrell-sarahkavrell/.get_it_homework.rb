@@ -2,6 +2,7 @@
 
 #rest client is what we will use to get the json code from the website
 require 'rest-cleint'
+require 'pry'
 require 'json'
 
 #create a method that will connect to the mashable api and
