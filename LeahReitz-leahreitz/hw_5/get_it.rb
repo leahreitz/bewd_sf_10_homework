@@ -37,10 +37,6 @@ def create_story_hash(story) #puts the stories into a hash of our own, using the
   puts new_story #but you can also run below with a method?
 end
 
-story_array = []
-story_array << {new_story}
-fhwkfh erfh;owh
-
 
 reddit_url = "http://www.reddit.com/.json"
 reddit_json_response = connect_to_api(reddit_url)
