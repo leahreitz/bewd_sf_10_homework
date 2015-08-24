@@ -25,7 +25,6 @@ end
 #@name is an an instance variable
 
 
-
 #this is a class method(note the self)
 #create a new robot - use .times method - part of Integer class
 def self.make_robots(number_of_robots)
@@ -62,7 +61,7 @@ puts "#{robot.flying_skills}. #{robot.laser_fighting_skills}. #{robot.empathy}."
 puts
 end
 
-#self stands for instance, for example: 
+#self stands for instance, for example:
 #<Robot:0x007fd1fb268bb0
 #@model="Super-Android",
 #@name="Nana",
@@ -104,5 +103,3 @@ Robot.make_robots(10)
 
 # nana = Robot.new("Nana", "Super-Android", "New Orleans")
 # puts nana.flying_skills
-
-
