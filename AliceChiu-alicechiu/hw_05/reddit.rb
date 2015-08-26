@@ -24,7 +24,7 @@ def print_stories(stories)
   end
 end
 
-#Extract the keys we want from JSON file and display them in the above method
+#Get certain data we want from JSON file and display them in the above method
 def create_new_stories(story)
   # story = {category: story["subreddit"], upvotes: story["ups"],
   #   author: story["author"], title: story["title"]}
