@@ -20,7 +20,7 @@ attr_accessor :temp, :set
 #class method
   def self.turn_on (all_temps,set_temp)
     t = Thermostat.new(all_temps, set_temp)
-    puts "the current temp is #{t.temp} and the set point is #{t.set}"
+    puts "The current temp is #{t.temp} and the set point is #{t.set}"
     return t
   end
 
@@ -35,13 +35,13 @@ attr_accessor :temp, :set
 private
 
   def turn_down(set)
-    puts "turning down the heater to match the set point of #{set} "
+    puts "Turning down the heater to match the set point of #{set} "
     @temp = @set
     puts "Confirmed, the temperature has been set to match the requested temperature of #{temp}"
   end
 
   def turn_up(set)
-    puts "turning up the heater to match the set point of #{set}"
+    puts "Turning up the heater to match the set point of #{set}"
     @temp = @set
     puts "Confirmed, the temperature has been set to match the requested temperature of #{temp}"
   end
