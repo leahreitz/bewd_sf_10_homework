@@ -23,8 +23,8 @@ class Thermostat
 
   def self.detect_temperature(all_temps, target_temp)
     all_temps.each do |degree|
-    @degree = Thermostat.new(degree)
-    @degree.calibrate_temp(target_temp)
+      ddegree = Thermostat.new(degree)
+      ddegree.calibrate_temp(target_temp)
     end
 
   end
