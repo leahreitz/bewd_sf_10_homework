@@ -11,36 +11,31 @@ class Robot
     @origin = origin
   end
 
-  def self.make_robots(number) #this is a class method
-    #create a new robot
-    robots = number.to_i
-    #robots.times do
-      #robot = Robot.new("Tim", "Super-Android", "New York")
-      #puts "#{robot.name} has been created"
-    #end
-    robots.times do #|robot|
+  def self.make_robots(number) #class method that creates a selected number of robot instances
+    robots = number.to_i #convert input number to integer to work with .times function
+    robots.times do #iterate the random_robot_maker function to create the requested number of robot instances
       Robot.random_robot_maker
     end
   end
 
-  def self.random_robot_maker
+  def self.random_robot_maker #class method that creates instances of robots with randomly picked attributes
+    #arrays of availbale attributes to pick from
     names = ["Tom","Katy","Ben","Melanie","Josh"]
     type = ["Android","Super-Android"]
     origins = ["New York", "Toronto", "San Francisco","Tokyo","Atlanta"]
-
+    #randomize selection with .sample array method
     name = names.sample
     origin = origins.sample
     type = type.sample
 
-    robot = Robot.new(name,type,origin)
+    robot = Robot.new(name,type,origin) #create a new robot instance with randomly selected attributes from arrays above
     puts "Hello, I am #{name} of type #{type}. I was produced in #{origin}."
     puts "#{robot.flying_skills}"
     puts "#{robot.laser_fighting_skills}"
     puts "#{robot.empathy}"
   end
-#this is an instance method
-#self refers to the instance of Robot that called this method
-  def flying_skills #methods (instance method) available for instances of Robot
+
+  def flying_skills #instance method applicable to instance of Robot class
     if type == "Super-Android"
      "I can fly!"
     else
@@ -48,7 +43,7 @@ class Robot
     end
   end
 
-  def laser_fighting_skills #<- so these methods apply only to Robot? we can't use these with local variables?
+  def laser_fighting_skills #instance method applicable to instance of Robot class
     if type == "Android" && origin == "San Francisco"
     "I have laser fighting skills."
     else
@@ -56,7 +51,7 @@ class Robot
     end
   end
 
-  def empathy
+  def empathy #instance method applicable to instance of Robot class
     if name == "Katy" || name == "Josh"
       "I'm friendly"
     else
@@ -66,17 +61,4 @@ class Robot
 
 end
 
-#call class method
-Robot.make_robots(10)
-
-#apply instance method?
-#nana = Robot.new("Nana", "Super-Android", "New Orleans") #local variable, state - it exists
-#puts nana.flying_skills
-
-#Robot Factory
-#1 - Flying skills
-#2 - Laser fighting skills
-#create a class
-#set attributes - read & write capabilities
-#build a constructor
-#create our instance of a class
+Robot.make_robots(10) #call the make_robots class method on Robot class with input number of 10
