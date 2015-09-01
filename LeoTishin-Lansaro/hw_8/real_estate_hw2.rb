@@ -1,6 +1,6 @@
-require_relative 'lib/building_hw2'
-require_relative 'lib/apartment_hw2'
-require_relative 'lib/renter_hw2'
+require_relative 'lib2/building_hw2'
+require_relative 'lib2/apartment_hw2'
+require_relative 'lib2/renter_hw2'
 
 require 'pry'
 
