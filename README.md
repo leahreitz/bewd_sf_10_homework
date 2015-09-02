@@ -43,7 +43,7 @@ Homework is given each Monday, and is always due the next Monday. Feedback on ea
 | 7          |----- No Homework ---- | [07_Ruby_Fundamentals](https://github.com/ga-students/bewd_sf_10/tree/master/07_Ruby_Fundamentals)| N/A | N/A |
 | 8          |       Complete `real_estate.rb` where you build a method to loop through a building's apartment array and find a renter, or a vacant apartment | Use your notes :)| Monday, August 31st | Wednesday, September 2nd |
 | 9          |        In Trello, Complete your `Possible Pitches` card, and once you have chosen your project, complete your `Chosen Project Pitch` card, with 5 user stories.    | [Trello](https://trello.com/b/XjgJdCUm/bewd-10-projects) & [09_Project_Proposals](https://github.com/ga-students/bewd_sf_10/tree/master/09_Project_Proposals) | Monday, August 31st | Wednesday, September 2nd |
-| 10         |            | - | - | - |
+| 10         |   Use rails scaffolding to create a basic rails app for 'animals'.  It should have at least one model containing whatever you think is important to store.  For example name, species, breed, age, image_url, carnivorous.  Remember to include every file from the app.     | [10_Rails_Intro](https://github.com/ga-students/bewd_sf_10/tree/master/10_Rails_Intro ) | Tuesday, September 8th | Saturday, September 12th |
 | 11         |            | - | - | - |
 | 12         |            | - | - | - |
 | 13         |            | - | - | - |
