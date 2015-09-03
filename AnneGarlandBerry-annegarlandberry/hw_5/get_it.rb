@@ -32,16 +32,7 @@ def print_stories(stories)
   story = create_story_hash(story)
   puts "Title: #{story[:title]}. Category: #{story[:category]}. Upvotes: #{story[:upvotes]}"
 end
-require 'csv'
-data = CSV.open "data.csv", headers:true
-data.each do |row|
-  title = row["title"]
-  puts title
-  category = row["category"]
-  puts category
-  upvotes = row["upvotes"]
-  puts upvotes
-end
+
 end
 
 def create_story_hash(story)
