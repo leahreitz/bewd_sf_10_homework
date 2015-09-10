@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  common_name: MyString
+  genus: MyString
+  species: MyString
+  native_to: MyString
+  north_america: false
+  south_america: false
+  europe: false
+  africa: false
+  asia: false
+  australia: false
+  anartica: false
+
+two:
+  common_name: MyString
+  genus: MyString
+  species: MyString
+  native_to: MyString
+  north_america: false
+  south_america: false
+  europe: false
+  africa: false
+  asia: false
+  australia: false
+  anartica: false

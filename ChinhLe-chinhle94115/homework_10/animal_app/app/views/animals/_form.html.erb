@@ -1,0 +1,61 @@
+<%= form_for(@animal) do |f| %>
+  <% if @animal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+
+      <ul>
+      <% @animal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :common_name %><br>
+    <%= f.text_field :common_name %>
+  </div>
+  <div class="field">
+    <%= f.label :genus %><br>
+    <%= f.text_field :genus %>
+  </div>
+  <div class="field">
+    <%= f.label :species %><br>
+    <%= f.text_field :species %>
+  </div>
+  <div class="field">
+    <%= f.label :native_to %><br>
+    <%= f.text_field :native_to %>
+  </div>
+  <div class="field">
+    <%= f.label :north_america %><br>
+    <%= f.check_box :north_america %>
+  </div>
+  <div class="field">
+    <%= f.label :south_america %><br>
+    <%= f.check_box :south_america %>
+  </div>
+  <div class="field">
+    <%= f.label :europe %><br>
+    <%= f.check_box :europe %>
+  </div>
+  <div class="field">
+    <%= f.label :africa %><br>
+    <%= f.check_box :africa %>
+  </div>
+  <div class="field">
+    <%= f.label :asia %><br>
+    <%= f.check_box :asia %>
+  </div>
+  <div class="field">
+    <%= f.label :australia %><br>
+    <%= f.check_box :australia %>
+  </div>
+  <div class="field">
+    <%= f.label :anartica %><br>
+    <%= f.check_box :anartica %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
