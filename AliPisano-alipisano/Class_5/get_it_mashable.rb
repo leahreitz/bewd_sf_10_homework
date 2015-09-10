@@ -21,24 +21,24 @@ def connect_to_api(url) #connect to the API, pass in endpoint
 end
 
 def find_stories(response)
-	stories = response["data"]["children"] #I'm getting an error with my terminal- I'm not able to parse through the data to find the relevant strings for Mashable
+	stories = response["new"]  
 	puts "*********Mashable has blessed us with #{stories.count} stories**********"
 	return stories
 end
 
 def print_stories(stories)
-	stories.each do |story|
-		create_story_hash(story["data"]) #Again here, I would change "data" if I were able to look through the data in terminal
+	stories.map do |story| #[a,b,c].each do |a| the |b|
+		create_story_hash(story) 
 	end
 end
 
-def create_story_hash(story)
-	new_story = {category: story["subreddit"], title: story["title"], upvotes: story["ups"]}
-	puts new_story
+def create_story_hash(story) #creating hash for myself
+	new_story = { author: story["author"], title: story["title"], content: story["content"]}
+	return new_story
 end   	
 
 
 mashable_url = "http://mashable.com/stories.json"
 mashable_json_response = connect_to_api(mashable_url)
 stories = find_stories(mashable_json_response)
-print_stories(stories)
+puts print_stories(stories)
