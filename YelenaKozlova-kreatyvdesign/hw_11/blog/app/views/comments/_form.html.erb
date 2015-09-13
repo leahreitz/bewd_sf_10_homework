@@ -1,0 +1,6 @@
+<%= simple_form_for([@article, @article.comments.build]) do |f| %>
+  <!-- Doesn't add a validation error if missing commenter name, not sure why -->
+  <%= f.input :commenter, label: false, placeholder: 'Your Name (Required)' %>
+  <%= f.input :body, label: false, placeholder: 'Comment' %>
+  <%= f.button :submit, "Post" %>
+<% end %>
