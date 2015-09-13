@@ -18,6 +18,9 @@
       <p>&nbsp;</p>
       <div class="well">
         <p>Add a comment:</p>
+        <% if flash[:notice] %>
+          <p class="text-danger">Commenter name is required.</p>
+        <% end %>
         <%= render 'comments/form' %>
       </div>
     </div>
