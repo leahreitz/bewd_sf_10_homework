@@ -1,0 +1,7 @@
+== README
+
+This application is for a very simple blog application.
+
+Written by Sean Narvasa.
+
+Tutorial: http://guides.rubyonrails.org/getting_started.html
