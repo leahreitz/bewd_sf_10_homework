@@ -1,0 +1,17 @@
+<div class = "col-12">
+  <h1 style="color:#cc3333;">Our Article Collection</h1>
+
+  <div class="well">
+    <% @articles.each do |article| %>
+    <li><%= link_to "#{article.title}", article_path(article) %></li>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    <%end%>
+  </div>
+</div>
+
+<div class="well">
+  <%= link_to "Add New Article", new_article_path, class: 'btn btn-default'%>
+</div>
