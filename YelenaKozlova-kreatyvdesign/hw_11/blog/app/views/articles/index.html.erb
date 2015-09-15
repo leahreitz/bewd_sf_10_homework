@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <span class="navbar-brand" href="#">Home</span>
+    <%= link_to 'Write a New Post', new_article_path, class: 'btn btn-primary navbar-btn pull-right' %>
+  </div>
+</nav>
+<div class="container">
+  <div class="col-xs-12">
+    <div class="row-fluid">
+      <h1>Blog</h1>
+      <div class="well">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Latest Posts</th>
+          </tr>
+        </thead>
+        <% @articles.each do |article| %>
+            <tr>
+              <td>
+                <h4><%= article.title %></h4>
+                <p>By: <%= article.author %>&nbsp;&nbsp;|&nbsp;&nbsp;
+                  Posted: <%= article.created_at %>&nbsp;&nbsp;|&nbsp;&nbsp;
+                  <%= pluralize(article.comments.count, "Comment") %></p>
+                  <% if article.private == true %>
+                    <p class="help-block">Private Post <%= link_to '[Edit]', edit_article_path(article) %></p>
+                  <% else %>
+                    <p><%= link_to 'Read Post', article_path(article) %></p>
+                  <% end %>
+              </td>
+            </tr>
+        <% end %>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
