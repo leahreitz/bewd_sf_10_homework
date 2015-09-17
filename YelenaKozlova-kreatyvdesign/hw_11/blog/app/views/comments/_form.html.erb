@@ -1,0 +1,6 @@
+<%= simple_form_for([@article, @article.comments.build]) do |f| %>
+<!-- The simple form error message won't show up for some reason, so had to use a flash message with redirect as a workaround -->
+  <%= f.input :commenter, label: false, placeholder: 'Your Name (Required)', error: 'Your name is required.' %>
+  <%= f.input :body, label: false, placeholder: 'Comment' %>
+  <%= f.button :submit, "Post" %>
+<% end %>

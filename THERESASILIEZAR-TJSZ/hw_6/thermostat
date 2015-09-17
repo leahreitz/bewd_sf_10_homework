@@ -1,0 +1,31 @@
+require 'pry'
+require 'pry-byebug'
+
+class Thermostat
+	attr_reader :current_temp
+   
+    def initialize(current_temps)
+    	@current_temps = current_temps
+    end
+    
+
+    def too_hot(too_hot)
+    	current_temps.each do |current_temps|
+    	if current_temps = >= 80
+    		puts "#{current_temps}! It's getting warm. You should turn off the heater"
+    	elsif current_temps = <= 70
+    		puts "#{current_temps}. Oh, cooler temps. You should turn up the heat."
+    	elsif current_temps == 75
+    		puts "Pack your bags! We're going on a picnic!"
+    	end
+    end
+
+
+#array_to_temperatures
+current_temps = [45,65,85,95, 66, 99, 75, 12, 22, 45, 65, 75, 70, 100, 10, 52, 22]
+
+
+#1. read temp, 
+#2. set target temp, and 
+#3. detect current temp and 
+#change if outside target temp range.

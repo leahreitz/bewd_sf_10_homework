@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <%= link_to 'Back to All Posts', articles_path, class: 'btn btn-primary navbar-btn' %>
+  </div>
+</nav>
+<div class="container">
+  <div class="col-xs-12 col-sm-6">
+    <div class="row-fluid">
+      <h1><%= @article.title %></h1>
+      <p>By: <%= @article.author %>&nbsp;&nbsp;|&nbsp;&nbsp;
+        Posted: <%= @article.created_at %>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'Edit Post', edit_article_path(@article) %></p>
+      <hr>
+      <p><%= @article.text %></p>
+      <hr>
+      <p class="lead"><%= pluralize(@article.comments.count, "Comment") %></p>
+      <%= render @article.comments %>
+      <p>&nbsp;</p>
+      <div class="well">
+        <p>Add a comment:</p>
+        <% if flash[:notice] %>
+          <p class="text-danger">Commenter name is required.</p>
+        <% end %>
+        <%= render 'comments/form' %>
+      </div>
+    </div>
+  </div>
+</div>
