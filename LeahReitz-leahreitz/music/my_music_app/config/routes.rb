@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  #establish a custom route
+  get 'about', to: "static_pages#about", as: "about"
+  get 'test', to: "static_pages#test", as: "test"
+  root 'static_pages#home'
+  #resources :songs
 
-  resources :songs
+  #root 'welcome#index'
 
-  root 'welcome#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
